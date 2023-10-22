@@ -9,7 +9,7 @@ export interface Song {
   image_path: string;
 }
 
-export interface userDetails {
+export interface UserDetails {
   id: string;
   first_name: string;
   last_name: string;
@@ -43,6 +43,10 @@ export interface Price {
   products?: Product;
 }
 
+export interface ProductWithPrice extends Product {
+  prices?: Price[];
+}
+
 export interface Subscription {
   id: string;
   user_id: string;
@@ -57,7 +61,7 @@ export interface Subscription {
   ended_at?: string;
   cancel_at?: string;
   canceled_at?: string;
-  trail_start?: string;
-  trail_end?: string;
+  trial_start?: string;
+  trial_end?: string;
   prices?: Price;
 }
